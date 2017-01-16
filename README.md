@@ -53,3 +53,18 @@ below:
 6. Plot the newly-transformed data in a different way than the original
 7. Compile the notebook
 8. Save and upload the notebook (.Rmd, .md, .html, and all figure files) to your Github repo.
+
+
+### Part 4: Create a Docker container
+Docker is an awesome tool for reproducing installation and setup steps on various machines,
+ensuring that the same set of dependencies and requirements are all installed predictably
+across machines. You will make a container in Docker that enables you to run either your
+Python or R analyses in the previous parts. The general process is:
+
+1. Write down (in a text or markdown file) the dependencies you installed
+2. Find a "base" Docker image (i.e. `ubuntu:16.04`)
+3. Launch that container with `/bin/bash`
+4. Install your dependencies/tools, keeping track of what you type
+5. Exit the container, and convert the instructions into a Dockerfile
+6. Test the Dockerfile
+7. Push the Dockerfile to Github and the Docker image to Dockerhub
